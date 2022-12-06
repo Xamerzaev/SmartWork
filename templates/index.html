@@ -27,12 +27,14 @@
                             {% if user.is_authenticated %}
                             <p>Добро пожаловать {{ user.username }}!</p>
                             <a href="{% url 'logout' %}">Выйти</a>
+                            <a href="{% url 'get_qr_code' %}">Сгенерировать код</a>
+                            <img src="static/yourcode.png">
                           {% else %}
                             <p>Вы еще не вошли в аккаунт</p>
                             <a href="{% url 'login' %}">Войти</a>
                           {% endif %}
                       <hr>
-      
+                      
                       <div class="d-flex justify-content-between align-items-center mb-4">
                         <div>
                           <p class="mb-1">Ваша тележка: </p>
@@ -160,4 +162,7 @@
         </div>
       </section>
 </body>
+<footer  style="background-color: #eee;">
+  
+</footer>
 </html>

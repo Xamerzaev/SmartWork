@@ -20,15 +20,13 @@
       
                       <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Вход</p>
       
-                      <form class="mx-1 mx-md-4">
-                        <form method="post", action="">
+                      <form method="post" class="mx-1 mx-md-4">
                             {% csrf_token %}
                             {{ form.as_p }}
                         <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                           <button type="submit" class="btn btn-primary btn-lg">Войти</button>
                         </div>
       
-                      </form>
                       <p><a href="{% url 'signup' %}">Еще не зарегистрированы?</a></p>
 
                     </form>
